@@ -77,7 +77,11 @@ export default function TodoList() {
         {todos.map((todo) => (
           <li key={todo.id}>
             <span
-              style={todo.isDone ? { textDecorationLine: "line-through" } : {}}
+              style={
+                todo.isDone
+                  ? { textDecorationLine: "line-through", color: "green" }
+                  : {}
+              }
             >
               {todo.task}
             </span>
